@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Geolocation API</title>
+    <style>
+      /* Body styling */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #c8d9e6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      h1 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+
+      /* Location result box */
+      #location {
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 15px;
+        background-color: #e9f7f9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        display: none;
+      }
+
+      h3 {
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: #697c90;
+      }
+
+      p {
+        font-size: 16px;
+        color: #555;
+        margin: 5px 0;
+      }
+      button {
+        background-color: #55ace3;
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .container {
+            margin: 20px;
+            padding-top: 10px;
+            border-radius: 8px;
+            background-color: #c8d9e6;  
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background-color: #c8d9e6;
+            padding: 10px;
+            z-index: 1000;
+        }
+        .nav-logo {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-left: 110px;
+        }
+        .nav-name {
+            font-size: 30px;
+            font-weight: 600;
+            color: var(--text-color-third);
+        }
+        .nav-logo span {
+            position: absolute;
+            top: -15px;
+            right: -20px;
+            font-size: 5em;
+            color: var(--text-color-second);
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav id="header">
+          <div class="nav-logo">
+              <p class="nav-name">Location</p>
+              <span>.</span>
+          </div>
+      </nav>
+   
+
+      <main class="wrapper">
+          <section class="section" id="tutorials">
+            <div class="top-header">
+              <br>
+              <h1>Tutorial Geo Location</h1>
+            </div>
+
+            <h1 style="text-align: center; color: #555;">Tutorial Geo Location</h1>
+<br><br>
+            <!-- Card Style untuk Latihan kanvas -->
+            <div class="tutorial-box">
+              <h2>Tutorial Membuat Geo Location</h2>
+
+                    
+              <h3>HTML & CSS Code:</h3>
+              <textarea
+                class="editor"
+                rows="20"
+                id="contentCode"
+                placeholder="Masukkan kode HTML dan CSS di sini"
+              >
+              <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geolocation API</title>
+    <style>
+      /* Body styling */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #b7c5d3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      h1 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      /* Stylish button */
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      /* Location result box */
+      #location {
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 15px;
+        background-color: #e9f7f9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        display: none;
+      }
+
+      h3 {
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: #007bff;
+      }
+
+      p {
+        font-size: 16px;
+        color: #555;
+        margin: 5px 0;
+      }
+      button {
+        background-color: #55ace3;
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .container {
+            margin: 20px;
+            padding-top: 10px;
+            border-radius: 8px;
+            background-color: #c8d9e6;  
+        }
+      nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background-color: #c8d9e6;
+            padding: 10px;
+            z-index: 1000;
+        }
+        .nav-logo {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-left: 110px;
+        }
+        .nav-name {
+            font-size: 30px;
+            font-weight: 600;
+            color: var(--text-color-third);
+        }
+        .nav-logo span {
+            position: absolute;
+            top: -15px;
+            right: -20px;
+            font-size: 5em;
+            color: var(--text-color-second);
+        }
+
+      </style>
+    <div class="container">
+      <h1>Get User Location with Geolocation API</h1>
+      <button onclick="getLocation()">Get Location</button>
+
+      <div id="location">
+        <h3>Your Location:</h3>
+        <p>Latitude: <span id="latitude"></span></p>
+        <p>Longitude: <span id="longitude"></span></p>
+        <p>Accuracy: <span id="accuracy"></span> meters</p>
+      </div>
+    </div>
+
+    <script>
+      // Function to get user location
+      function getLocation() {
+        const locationBox = document.getElementById("location");
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+          alert("Geolocation is not supported by this browser.");
+        }
+
+        // Add loading effect to the button
+        const button = document.querySelector("button");
+        button.innerHTML = "Getting Location...";
+        button.disabled = true;
+        button.style.backgroundColor = "#ccc";
+      }
+
+      // Function to display position
+      function showPosition(position) {
+        document.getElementById("latitude").innerHTML =
+          position.coords.latitude;
+        document.getElementById("longitude").innerHTML =
+          position.coords.longitude;
+        document.getElementById("accuracy").innerHTML =
+          position.coords.accuracy + " meters";
+
+        // Show the location div
+        const locationBox = document.getElementById("location");
+        locationBox.style.display = "block";
+
+        // Revert button state
+        const button = document.querySelector("button");
+        button.innerHTML = "Get Location";
+        button.disabled = false;
+        button.style.backgroundColor = "#007bff";
+      }
+
+      // Function to handle errors
+      function showError(error) {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            alert("User denied the request for Geolocation.");
+            break;
+          case error.POSITION_UNAVAILABLE:
+            alert("Location information is unavailable.");
+            break;
+          case error.TIMEOUT:
+            alert("The request to get user location timed out.");
+            break;
+          case error.UNKNOWN_ERROR:
+            alert("An unknown error occurred.");
+            break;
+        }
+
+        // Revert button state even in case of an error
+        const button = document.querySelector("button");
+        button.innerHTML = "Get Location";
+        button.disabled = false;
+        button.style.backgroundColor = "#007bff";
+      }
+    </script>
+  </body>
+</html>
+
+                </textarea>
+                
+                <button class="run-button" onclick="runContentCode()">Run</button>
+                <button class="undo-button" onclick="undoContentCode()">Undo</button>
+                
+                <!-- Keterangan hasil -->
+                <h3 id="resultHeader" style="display: none;">Hasil:</h3>
+                <div class="preview" id="previewContent"></div>
+              </div>
+            </section>
+        </main>
+
+        <script>
+            // Riwayat Kode
+            let contentCodeHistory = [];
+
+            // Fungsi untuk menjalankan kode konten
+            function runContentCode() {
+  const code = document.getElementById("contentCode").value;
+  
+  // Menampilkan konten HTML
+  document.getElementById("previewContent").innerHTML = code;
+
+  // Menjalankan JavaScript dalam konteks yang baru
+  const script = document.createElement("script");
+  script.textContent = code.match(/<script>([\s\S]*?)<\/script>/)[1]; // Menangkap kode JavaScript dari textarea
+  document.body.appendChild(script);
+  
+  document.getElementById("resultHeader").style.display = "block"; // Menampilkan keterangan hasil
+  contentCodeHistory.push(code);
+}
+
+
+        </script>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid rgb(0, 0, 0);
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #86c6cd;
+            text-align: center;
+        }
+        button {
+            background-color: #55ace3;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+    <title>Portfolio</title>
+</head>
+<body>
+  <div class="container">
+    <nav id="header">
+        <div class="nav-logo">
+            <p class="nav-name">Tabel</p>
+            <span>.</span>
+        </div>
+    </nav>
+
+    <main class="wrapper">
+        <section class="section" id="tutorials">
+          <div class="top-header">
+            <br>
+            <h1>Tutorial Membuat Tabel</h1>
+          </div>
+    <h1>Tutorial Membuat Tabel</h1>
+    <p>
+      Tabel dalam HTML digunakan untuk menampilkan data dalam format baris dan kolom. 
+      Struktur dasar tabel terdiri dari elemen <code>&lt;table&gt;</code> yang berfungsi sebagai wadah tabel. 
+      Di dalam tabel terdapat dua bagian utama: 
+      <code>&lt;thead&gt;</code> untuk mendefinisikan header tabel dan 
+      <code>&lt;tbody&gt;</code> untuk konten data.
+    </p>
+    <p>
+      Bagian <code>&lt;thead&gt;</code> digunakan untuk mendefinisikan header tabel, yang biasanya berisi judul kolom yang 
+      menjelaskan jenis data yang akan ditampilkan. Setiap kolom dalam header tabel didefinisikan menggunakan elemen 
+      <code>&lt;th&gt;</code>, yang memberikan penekanan visual pada judul tersebut.
+    </p>
+    <p>
+      Sementara itu, bagian <code>&lt;tbody&gt;</code> berisi konten data dari tabel. Di dalam <code>&lt;tbody&gt;</code>, 
+      setiap baris data didefinisikan menggunakan elemen <code>&lt;tr&gt;</code>, dan setiap sel data dalam baris tersebut 
+      didefinisikan menggunakan elemen <code>&lt;td&gt;</code>. Ini memudahkan pemisahan antara header dan isi tabel, 
+      serta membuatnya lebih mudah untuk dibaca.
+    </p>
+    <p>
+      Berikut contoh sintax untuk membuat tabel dengan kolom first name, last name, age, dan alamat 
+    </p>
+    <textarea
+        id="contentCode"
+        rows="10"
+        cols="50"
+        placeholder="Masukkan kode HTML dan CSS di sini"
+    >
+<!-- Tabel Pertama -->
+<table>
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Alamat</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>Mia</td><td>Anggreini</td><td>20</td><td>Trihanggo</td></tr>
+        <tr><td>Kia</td><td>Natasha</td><td>30</td><td>Sleman</td></tr>
+        <tr><td>Jihan</td><td>Eka</td><td>40</td><td>Bantul</td></tr>
+    </tbody>
+</table>
+
+<!-- Tabel Kedua -->
+<table>
+    <thead>
+        <tr>
+            <th>NIM</th><th>Nama</th><th>IPK Sem 1</th><th>IPK Sem 2</th>
+            <th>IPK Sem 3</th><th>IPK Sem 4</th><th>IPK Sem 5</th>
+            <th>IPK Sem 6</th><th>IPK Sem 7</th><th>IPK Sem 8</th>
+            <th>Jurusan</th><th>Fakultas</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>5220311034</td><td>Yesty Anggela</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>Sistem Informasi</td><td>FST</td></tr>
+        <tr><td>5220311017</td><td>Fitrah Handayani</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>Sistem Informasi</td><td>FST</td></tr>
+        <tr><td>5220311022</td><td>Nassa Fadilla</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>Sistem Informasi</td><td>FST</td></tr>
+        <tr><td>5220311004</td><td>Mia Anggreini</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>Sistem Informasi</td><td>FST</td></tr>
+    </tbody>
+</table>
+    </textarea>
+
+    <button onclick="runContentCode()">Run</button>
+
+    <h3 id="resultHeader" style="display: none;">Hasil:</h3>
+    <div id="previewContent"></div>
+
+    <script>
+        function runContentCode() {
+    // Ambil konten dari textarea
+    const content = document.getElementById("contentCode").value;
+
+    // Temukan elemen untuk pratinjau hasil
+    const previewContent = document.getElementById("previewContent");
+    const resultHeader = document.getElementById("resultHeader");
+
+    // Set isi dari elemen pratinjau dengan konten HTML dari textarea
+    previewContent.innerHTML = content;
+
+    // Tampilkan header hasil
+    resultHeader.style.display = 'block';
+}
+    </script>
+</body>
+</html>

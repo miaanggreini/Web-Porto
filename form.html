@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+    .code-container {
+        border: 1px solid #ccc;
+        padding: 10px;
+        max-height: 200px; /* Atur tinggi maksimum */
+        overflow-y: auto; /* Tambahkan scrollbar vertikal */
+        background-color: #f9f9f9; /* Warna latar belakang */
+        font-family: monospace; /* Font monospace untuk sintaks */
+    }
+    .register-container {
+            background-color: white; /* Warna latar belakang form */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px; /* Menyesuaikan lebar dengan layar */
+            text-align: left; /* Rata kiri untuk konten form */
+            margin: 0 auto;
+        }
+
+        .register-container h1 {
+            text-align: center; /* Memusatkan teks judul */
+            margin-bottom: 20px;
+        }
+
+        .register-container label {
+            display: block; /* Membuat label dalam baris baru */
+            margin-top: 10px; /* Jarak atas antara label dan input */
+        }
+
+        .register-container input[type="text"],
+        .register-container input[type="email"],
+        .register-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0; /* Jarak antara input */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box; /* Memastikan padding tidak melebihi lebar */
+        }
+
+        .register-container input[type="submit"],
+        .register-container input[type="reset"] {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: #365486; /* Warna tombol */
+            color: white;
+            cursor: pointer;
+            margin-top: 10px; /* Jarak atas pada tombol */
+        }
+
+        .register-container input[type="reset"] {
+            background-color: #f44336; /* Warna untuk tombol reset */
+        }
+
+        .register-container input[type="submit"]:hover,
+        .register-container input[type="reset"]:hover {
+            opacity: 0.9; /* Efek hover pada tombol */
+        }
+        h2{
+            margin-left: 20px;
+        }
+        p{
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 10px;
+            text-align: justify;
+        }
+        button {
+        background-color: #55ace3;
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+        
+</style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name">Form</p>
+                <span>.</span>
+            </div>
+        </nav>
+
+        <main class="wrapper">
+            <section class="section" id="tutorials">
+              <div class="top-header">
+                <br>
+                <h1>Tutorial Membuat Form</h1>
+              </div>
+              <div class="tutorial-box">
+
+                <h2>Tutorial Membuat Form</h2>
+                <p>Tutorial membuat form berikut adalah proses sederhana untuk membuat form pendaftaran yang 
+                    meminta data seperti username, email, password, dan konfirmasi password dari pengguna. 
+                    Form ini dibungkus dalam elemen <code>&lt;div class="register-container"&gt;</code>, 
+                    yang memberikan tata letak yang rapi, latar belakang putih, serta memberikan jarak 
+                    dan bayangan. Di bagian atas form terdapat elemen heading <code>&lt;h1&gt;</code> yang 
+                    menampilkan teks "Register" sebagai judul form, memberi tahu pengguna bahwa form ini 
+                    digunakan untuk mendaftar.</p>
+                <p>Form itu sendiri dibuat menggunakan tag <code>&lt;form&gt;</code>, di mana atribut
+                    <code>action</code> diatur ke <code>login.html</code>, yang menunjukkan bahwa data yang diisi 
+                    dalam form akan dikirimkan ke halaman tersebut saat form dikirimkan. Atribut <code>method="GET"</code> 
+                    digunakan untuk mengirim data dengan metode GET, yang menampilkan data di URL.</p>
+                <p>Di dalam form, terdapat beberapa elemen <code>&lt;label&gt;</code> yang dipasangkan dengan
+                    elemen <code>&lt;input&gt;</code> untuk meminta informasi dari pengguna. Label pertama untuk
+                     username, diikuti dengan input bertipe teks <code>&lt;input type="text"&gt;</code>, 
+                     label untuk email yang diikuti dengan input bertipe email <code>&lt;input type="email"&gt;</code>, 
+                     serta dua input bertipe password <code>&lt;input type="password"&gt;</code> yang meminta pengguna 
+                     memasukkan dan mengonfirmasi password mereka. Setiap input memiliki atribut <code>required</code>,
+                    yang memastikan bahwa semua kolom harus diisi sebelum form dapat dikirim.</p>
+                <p>Di bagian bawah form terdapat dua tombol, yaitu tombol submit <code>&lt;input type="submit"&gt;</code> 
+                    dan reset <code>&lt;input type="reset"&gt;</code>. Tombol submit bertanggung jawab untuk mengirimkan 
+                    form, sementara tombol reset menghapus semua input yang sudah diisi. Tata letak tombol ini diatur 
+                    agar muncul berdampingan dengan memanfaatkan properti CSS <code>display: flex</code>.</p></p>
+                      
+                <h3>HTML & CSS Code:</h3>
+                <textarea
+                  class="editor"
+                  rows="20"
+                  id="contentCode"
+                  placeholder="Masukkan kode HTML dan CSS di sini"
+                >
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+    .code-container {
+        border: 1px solid #ccc;
+        padding: 10px;
+        max-height: 200px; /* Atur tinggi maksimum */
+        overflow-y: auto; /* Tambahkan scrollbar vertikal */
+        background-color: #f9f9f9; /* Warna latar belakang */
+        font-family: monospace; /* Font monospace untuk sintaks */
+    }
+    .register-container {
+            background-color: white; /* Warna latar belakang form */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px; /* Menyesuaikan lebar dengan layar */
+            text-align: left; /* Rata kiri untuk konten form */
+            margin: 0 auto;
+        }
+
+        .register-container h1 {
+            text-align: center; /* Memusatkan teks judul */
+            margin-bottom: 20px;
+        }
+
+        .register-container label {
+            display: block; /* Membuat label dalam baris baru */
+            margin-top: 10px; /* Jarak atas antara label dan input */
+        }
+
+        .register-container input[type="text"],
+        .register-container input[type="email"],
+        .register-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0; /* Jarak antara input */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box; /* Memastikan padding tidak melebihi lebar */
+        }
+
+        .register-container input[type="submit"],
+        .register-container input[type="reset"] {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: #365486; /* Warna tombol */
+            color: white;
+            cursor: pointer;
+            margin-top: 10px; /* Jarak atas pada tombol */
+        }
+
+        .register-container input[type="reset"] {
+            background-color: #f44336; /* Warna untuk tombol reset */
+        }
+
+        .register-container input[type="submit"]:hover,
+        .register-container input[type="reset"]:hover {
+            opacity: 0.9; /* Efek hover pada tombol */
+        }
+        h2{
+            margin-left: 20px;
+        }
+        p{
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 10px;
+            text-align: justify;
+        }
+        button {
+        background-color: #55ace3;
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+        
+</style>
+
+<body>
+    <div class="register-container">
+        <h1>Register</h1>
+        <form action="login.html" method="GET"> <!-- Arahkan ke login.html -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+
+            <div style="display: flex; justify-content: space-between;">
+                <input type="submit" value="Register">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+<br>
+</body>
+</html></html>
+</textarea>
+                
+<button class="run-button" onclick="runContentCode()">Run</button>
+<button class="undo-button" onclick="undoContentCode()">Undo</button>
+
+<!-- Keterangan hasil -->
+<h3 id="resultHeader" style="display: none;">Hasil:</h3>
+<div class="preview" id="previewContent"></div>
+</div>
+</section>
+</main>
+<script>
+    // Riwayat Kode
+    let contentCodeHistory = [];
+
+    // Fungsi untuk menjalankan kode konten
+    function runContentCode() {
+      const code = document.getElementById("contentCode").value;
+      document.getElementById("previewContent").innerHTML = code;
+      document.getElementById("resultHeader").style.display = "block"; // Menampilkan keterangan hasil
+      contentCodeHistory.push(code);
+    }
+
+    function kanvas(){
+      var c = document.getElementById("kanvas");
+      var ctx = c.getContext("2d");
+      var img = document.getElementById("gambar");
+      ctx.drawImage(img, 0, 0, c.width, c.height);
+    }
+
+    function undoContentCode() {
+      if (contentCodeHistory.length > 1) {
+        contentCodeHistory.pop(); // Hapus entri terakhir
+        const previousCode = contentCodeHistory[contentCodeHistory.length - 1];
+        document.getElementById("contentCode").value = previousCode;
+        document.getElementById("previewContent").innerHTML = previousCode; // Perbarui preview
+      } else {
+        document.getElementById("previewContent").innerHTML = ""; // Hapus hasil jika tidak ada riwayat
+        document.getElementById("contentCode").value = ""; // Hapus input juga
+      }
+    }
+</script>
+</div>
+</body>
+</html>

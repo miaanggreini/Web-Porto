@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Tutorial Deploy ke GitHub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+            margin: 0;
+            padding: 0;
+            background-color: #c8d9e6;
+        }
+        .container {
+            margin: 20px;
+            padding-top: 10px;
+            border-radius: 8px;
+            background-color: #c8d9e6;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background-color: #c8d9e6;
+            padding: 10px;
+            z-index: 1000;
+        }
+        .nav-logo {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-left: 110px;
+        }
+        .nav-name {
+            font-size: 30px;
+            font-weight: 600;
+            color: var(--text-color-third);
+        }
+        .nav-logo span {
+            position: absolute;
+            top: -15px;
+            right: -20px;
+            font-size: 5em;
+            color: var(--text-color-second);
+        }
+        h1 {
+            color: #141010;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #0c0b0b;
+        }
+        p, ul, ol {
+            text-align: left;
+            font-weight: normal;
+            margin-left: 20px;
+        }
+        pre {
+            background-color: #eaeaea;
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="header">
+        <div class="nav-logo">
+            <p class="nav-name">Deploy</p>
+            <span>.</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main class="wrapper">
+            <section class="section" id="tutorials">
+                <div class="top-header">
+                    <br>
+                    <h1>Tutorial Deploy GitHub</h1>
+                </div>
+
+                <p>Berikut merupakan langkah-langkah yang harus dilakukan untuk deploy project ke GitHub</p>
+                
+                <p class="section-title">Pastikan :</p>
+                <ol>
+                    <li>Memiliki akun GitHub.</li>
+                    <li>Install git pada komputer/laptop.</li>
+                    <li>Siapkan project yang akan di deploy.</li>
+                </ol>
+                
+                <p class="section-title">Langkah-langkah untuk Deploy :</p>
+                <ol>
+                    <li>Buat Repository Baru
+                        <ul>
+                            <li>Masuk ke akun GitHub.</li>
+                            <li>Kemudian klik ikon <strong>+</strong> di pojok kanan atas dan 
+                                pilih <strong>New repository</strong>.</li>
+                            <li>Setelah itu isi nama repository pada bagian Repository name.</li>
+                            <li>Tulis deskripsi project (opsional).</li>
+                            <li>Pilih <strong>Public</strong> agar semua orang dapat mengakses 
+                                repositori atau pilih <strong>Private</strong> 
+                                sehingga orang yang dipilih saja yang dapat mengakses, lalu klik 
+                                <strong>Create repository</strong>.</li>
+                            </ul>
+                    </li>
+                    <li>Inisialisasi Git di Direktori Proyek Anda
+                        <pre><code>cd direktori-nama_project
+git init</code></pre>
+                    </li>
+                    <li>Tambahkan File 
+                        <pre><code>git add .</code></pre>
+                    </li>
+                    <li>Commit Perubahan 
+                        <pre><code>git commit -m "first commit "</code></pre>
+                    </li>
+                    <li>Hubungkan Repository Lokal ke GitHub
+                        <pre><code>git remote add origin https://github.com/username/nama-repository.git</code></pre>
+                    </li>
+                    <li>Kirim Kode ke GitHub
+                        <pre><code>git push -u origin main</code></pre>
+                    </li>
+                </ol>
+                
+                <h2>Kesimpulan</h2>
+                <p>Project sekarang telah berhasil di-deploy ke GitHub. Untuk memastikan bahwa semua 
+                    file telah diunggah dengan benar bisa dengan membuka URL repository GitHub yang 
+                    telah dibuat. Di sana terdapat semua file project beserta riwayat commit. URL ini 
+                    juga dapat dibagikan kepada orang lain apabila mereka mengakses atau berkolaborasi 
+                    dalam proyek tersebut. Pastikan repository diatur ke publik jika ingin membagikannya 
+                    kepada pengguna umum atau ke private jika hanya pengguna tertentu yang boleh mengaksesnya.</p>
+            </section>
+            <div class="top-header">
+                <br>
+                <h2>Tutorial Membuat Live Link (GitHub Pages)</h2>
+            </div>
+            <p>Berikut merupakan langkah-langkah yang harus dilakukan untuk membuat live link di GitHub</p>
+            <ol>
+                <li>Pastikan project sudah ada di repositori github</li>
+                <li>Masuk ke halaman repositori, kemudian klik tab <strong>settings</strong></li>
+                <li>Pada halaman <strong>Settings</strong> gulir ke bawah hingga menemukan bagian <strong>Pages</strong></li>
+                <li>Pada bagian <strong>Source</strong>, pilih cabang (branch) yang ingin Anda gunakan sebagai sumber GitHub Pages. Pilih main, kemudian pilih direktori root dengan opsi <strong>/(root)</strong> </li>
+                <li>Setelah mengatur cabang dan direktori, klik <STROng>Save</STROng> untuk menyimpan pengaturan.</li>
+                <li>GitHub akan memproses pengaturan GitHub Pages. Tunggu beberapa saat hingga tautan GitHub Pages tersedia.</li>
+                <li>Setelah konfigurasi selesai, GitHub akan menampilkan tautan GitHub Pages di bagian atas pengaturan. Klik tautan tersebut untuk membuka live preview dari project.</li>
+            </ol>
+        </main>
+    </div>
+</body>
+</html>
